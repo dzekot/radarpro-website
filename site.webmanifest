@@ -1,7 +1,7 @@
 {
   "name": "RadarPro",
   "short_name": "RadarPro",
-  "description": "Radar, EDS ve hız koridoru uyarıları — arka planda sesli uyarı.",
+  "description": "RadarPro — radar, EDS ve hız koridoru uyarıları. Arka planda sesli uyarı ve ortalama hız takibi.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050508",
