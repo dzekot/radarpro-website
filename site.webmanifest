@@ -1,0 +1,18 @@
+{
+  "name": "RadarPro",
+  "short_name": "RadarPro",
+  "description": "Radar, EDS ve hız koridoru uyarıları — arka planda sesli uyarı.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
