@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://radarpro.online/sitemap.xml
+Sitemap: https://www.radarpro.online/sitemap.xml
