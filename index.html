@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RadarPro — 2.660 radar, 802 hız koridoru ve EDS uyarıları. Sesli bildirim, ortalama hız takibi ve neon HUD. Arka planda aktif.">
+  <meta name="theme-color" content="#050508">
+  <meta property="og:title" content="RadarPro — Radar, EDS & Hız Koridoru">
+  <meta property="og:description" content="Noktaya varmadan uyarı alın. 2.660 radar ve 802 hız koridoru ile Türkiye yollarında güvenli sürüş.">
+  <meta property="og:url" content="https://radarpro.online">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://radarpro.online/assets/icon.png">
+  <title>RadarPro — Radar, EDS & Hız Koridoru Uyarıları</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="map-bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="assets/icon.png" alt="RadarPro ikonu" width="42" height="42">
+        RadarPro
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç">☰</button>
+      <ul class="nav-links">
+        <li><a href="#ozellikler">Özellikler</a></li>
+        <li><a href="#ekranlar">Arayüz</a></li>
+        <li><a href="#indir">İndir</a></li>
+        <li><a href="gizlilik.html">Gizlilik</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content glass-panel">
+          <span class="hero-badge">Türkiye genelinde sürüş yardımcınız</span>
+          <h1>Radarları ve EDS'leri <span>yaklaşırken duy,</span><br>koridorda kontrolü ele al.</h1>
+          <p>Arka planda sesli uyarı — 2.660 radar, 802 hız koridoru ve 1.454 EDS. Ortalama hız ve neon HUD ile navigasyon açıkken bile yanınızda.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://apps.apple.com/de/app/radarpro-radar-eds/id6776351434" target="_blank" rel="noopener noreferrer">App Store'dan İndir</a>
+            <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.radartr.radarpro" target="_blank" rel="noopener noreferrer">Google Play'den İndir</a>
+          </div>
+        </div>
+        <div class="hero-phone">
+          <img class="phone-shot" src="assets/hero-arka-plan.png" alt="RadarPro arka planda aktif uyarı ekranı">
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <article class="stat-card">
+          <div class="number">2.660</div>
+          <div class="label">Radar noktası</div>
+        </article>
+        <article class="stat-card">
+          <div class="number">802</div>
+          <div class="label">Hız koridoru</div>
+        </article>
+        <article class="stat-card">
+          <div class="number">1.454</div>
+          <div class="label">EDS noktası</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="ozellikler">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sürüşe odaklanın, gerisini RadarPro halletsin</h2>
+          <p>Gerçek yol verisiyle beslenen neon HUD. Her özellik somut bir faydaya bağlı — abartılı vaat yok.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3>Yaklaşmadan haberdar olun</h3>
+            <p>Radar ve EDS noktalarına girmeden sesli ve görsel uyarı. Hızınızı ayarlamak için zaman kazanın.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🛣️</div>
+            <h3>Ortalama hızınızı koruyun</h3>
+            <p>Koridor girişinden çıkışa kadar otomatik hesap. Limit aşımı riskini erkenden görün.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Tek bakışta net bilgi</h3>
+            <p>Anlık ve ortalama hız neon HUD'da. Karanlıkta okunaklı, dikkatiniz yolda kalsın.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🔊</div>
+            <h3>Gözünüz yolda kalsın</h3>
+            <p>Özelleştirilebilir sesli bildirimler. Ekrana bakmadan yaklaşan noktaları duyun.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Geniş kapsam, güncel veri</h3>
+            <p>Otoyol, şehir girişi ve yoğun bölgelerde binlerce nokta haritada işaretli.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Arka planda sürüş tanıma</h3>
+            <p>Sürüşe başladığınızda RadarPro devreye girer. Navigasyon veya başka uygulamadayken bile uyarılar sesli gelir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ekranlar">
+      <div class="container">
+        <div class="section-header">
+          <h2>Gece sürüş arayüzü</h2>
+          <p>Karanlık cam, neon vurgu, sürücü odaklı düzen — ekran görüntüleriyle keşfedin.</p>
+        </div>
+        <div class="gallery-tabs" role="tablist"></div>
+        <div class="gallery-showcase">
+          <div class="gallery-info">
+            <h3>Türkiye kapsam haritası</h3>
+            <p>2.660 radar, 802 hız koridoru ve 1.454 EDS — güncel veriyle haritada, rotanız boyunca.</p>
+            <div class="gallery-thumbs"></div>
+          </div>
+          <div class="gallery-phone">
+            <img class="phone-shot" src="assets/turkiye-yollari.png" alt="Türkiye kapsam haritası">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="indir">
+      <div class="container">
+        <div class="cta-box">
+          <span class="cta-badge">Arka plan · sesli uyarı</span>
+          <h2>İndir, arka plana al — <span>sesli uyarının keyfini çıkar</span></h2>
+          <p>RadarPro sürüşü arka planda algılar; radar, EDS ve koridor uyarılarını sesli verir. Navigasyon veya müzik açıkken bile ekrana bakmadan bilin.</p>
+          <div class="cta-buttons">
+            <a class="btn btn-store" href="https://apps.apple.com/de/app/radarpro-radar-eds/id6776351434" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+            <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.radartr.radarpro" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.002 1.002 0 0 1-.536-.903V2.717c0-.4.236-.763.598-.903h.037zm1.214 20.087L14.85 13.5l-3.59-3.59-6.437 6.437v5.554zm1.17-21.9l10.182 5.864 3.59-3.59L5.993.001zM15.45 12.9l3.59 3.59-10.182 5.864 6.592-9.454z"/></svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a href="index.html" class="brand">
+        <img src="assets/icon.png" alt="" width="32" height="32">
+        RadarPro
+      </a>
+      <ul class="footer-links">
+        <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
+        <li><a href="mailto:support@radarpro.online">support@radarpro.online</a></li>
+        <li><a href="https://radarpro.online">radarpro.online</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 RadarPro — radar, EDS ve hız koridoru uyarıları. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="map-background.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
