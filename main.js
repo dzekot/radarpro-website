@@ -1,4 +1,11 @@
 (function () {
+  if (/\/index\.html$/i.test(window.location.pathname)) {
+    window.location.replace(
+      `${window.location.origin}/${window.location.search}${window.location.hash}`,
+    );
+    return;
+  }
+
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
