@@ -6,6 +6,17 @@
     return;
   }
 
+  const APPLE_URL = 'https://apps.apple.com/de/app/radarpro-radar-eds/id6776351434';
+  const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.radartr.radarpro';
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isAndroid = /Android/.test(ua);
+  const storeUrl = isAndroid ? PLAY_URL : APPLE_URL;
+
+  document.querySelectorAll('[data-store-link]').forEach(el => {
+    el.href = storeUrl;
+  });
+
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
