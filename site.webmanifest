@@ -1,22 +1,25 @@
 {
   "name": "RadarPro",
   "short_name": "RadarPro",
-  "description": "RadarPro — radar, EDS ve hız koridoru uyarıları. Arka planda sesli uyarı ve ortalama hız takibi.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#050508",
-  "theme_color": "#050508",
+  "description": "Radar, EDS ve hız koridoru için sesli uyarı.",
   "lang": "tr",
+  "dir": "ltr",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050507",
+  "theme_color": "#050507",
   "icons": [
     {
-      "src": "/favicon-192x192.png",
-      "sizes": "192x192",
+      "src": "./assets/brand/radarpro-icon-maskable.png",
+      "sizes": "1024x1024",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
+      "src": "./assets/brand/radarpro-icon.png",
+      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
     }

@@ -1,0 +1,7 @@
+/* The guide is a quiet editorial page; the cinematic drive remains unchanged. */
+.rp-guide-intro{font-size:clamp(17px,2vw,20px);color:#c5c5d1;max-width:62ch}
+.rp-boot-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px}
+.rp-boot-actions a{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:700;color:#fff}
+.rp-boot-primary{background:#c81f43}.rp-boot-primary:hover{background:#e22b51}
+.rp-boot-secondary{border:1px solid #4b4b58}
+@media(max-width:520px){header nav{flex-wrap:wrap;justify-content:flex-end;gap:8px 14px}.rp-boot-actions{flex-direction:column;align-items:flex-start}}
