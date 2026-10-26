@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Generated from pages/home.template.html and src/data/search.json. -->
-<html lang="tr">
+<html lang="tr" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -12,11 +12,21 @@
     <link rel="canonical" href="https://radarpro.online/" />
     <link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
+    <link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
+    <link rel="alternate" hreflang="de" href="https://radarpro.online/de.html" />
+    <link rel="alternate" hreflang="ru" href="https://radarpro.online/ru.html" />
+    <link rel="alternate" hreflang="ar" href="https://radarpro.online/ar.html" />
+    <link rel="alternate" hreflang="pt" href="https://radarpro.online/pt.html" />
     <link rel="alternate" hreflang="x-default" href="https://radarpro.online/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="RadarPro" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="ar_SA" />
+    <meta property="og:locale:alternate" content="pt_BR" />
     <meta property="og:url" content="https://radarpro.online/" />
     <meta property="og:title" content="RadarPro — İller Arası Radar, EDS ve Sesli Uyarı" />
     <meta property="og:description" content="Şehirler arası yollarda radar, EDS ve hız koridoru farkındalığı. Harita ve ön plan uyarıları Free; arka plan sesli uyarılar Pro. iOS ve Android." />
@@ -38,7 +48,12 @@
       "name": "RadarPro",
       "inLanguage": [
         "tr",
-        "en"
+        "en",
+        "es",
+        "de",
+        "ru",
+        "ar",
+        "pt"
       ]
     },
     {
@@ -72,12 +87,64 @@
     }
   ]
 }</script>
+    <script>
+      (function () {
+        try {
+          var LANGS = ["tr","en","es","de","ru","ar","pt"];
+          var PATHS = {"tr":"./","en":"./en.html","es":"./es.html","de":"./de.html","ru":"./ru.html","ar":"./ar.html","pt":"./pt.html"};
+          var path = location.pathname;
+          var file = path.split('/').filter(Boolean).pop() || '';
+          var name = file.replace(/\.html$/i, '');
+          var current = LANGS.indexOf(name) >= 0 ? name : 'tr';
+          var saved = null;
+          try { saved = localStorage.getItem('radarpro.lang'); } catch (e) {}
+          if (LANGS.indexOf(saved) < 0) saved = null;
+          var params = new URLSearchParams(location.search);
+          var requested = params.get('lang');
+          if (LANGS.indexOf(requested) < 0) requested = null;
+          var crawler = /bot|crawler|spider|crawling|slurp|bingpreview|googlebot|yandex|baidu|duckduck|facebookexternalhit|whatsapp|telegram|linkedin|twitterbot|embedly|pinterest/i.test(navigator.userAgent || '');
+          var pinned = params.has('at') || params.get('shot') === '1';
+          var next = null;
+          if (saved && saved !== current) {
+            next = saved;
+          } else if (!saved && requested && requested !== current) {
+            next = requested;
+          } else if (!saved && !requested && !crawler && !pinned && current === 'tr') {
+            var tags = (navigator.languages || []).concat([navigator.language || '']);
+            var matched = null;
+            for (var i = 0; i < tags.length; i++) {
+              var base = String(tags[i]).toLowerCase().split(/[-_]/)[0];
+              if (LANGS.indexOf(base) >= 0) { matched = base; break; }
+            }
+            if (matched && matched !== current) next = matched;
+            else if (!matched) next = 'en';
+          }
+          if (next) {
+            var target = new URL(PATHS[next], location.href);
+            target.search = location.search;
+            target.searchParams.delete('lang');
+            target.hash = location.hash;
+            if (target.pathname !== path) { location.replace(target.href); return; }
+          }
+          if (params.has('lang')) {
+            params.delete('lang');
+            history.replaceState(null, '', path + (params.toString() ? '?' + params.toString() : '') + location.hash);
+          }
+          document.addEventListener('click', function (event) {
+            var link = event.target && event.target.closest ? event.target.closest('a[data-lang]') : null;
+            if (!link) return;
+            try { localStorage.setItem('radarpro.lang', link.getAttribute('data-lang')); } catch (e) {}
+          });
+        } catch (e) {}
+      })();
+    </script>
     <link rel="icon" href="./assets/brand/radarpro-icon.png" sizes="any" />
     <link rel="apple-touch-icon" href="./assets/brand/radarpro-icon-maskable.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet" />
+
     <link rel="preload" as="fetch" href="./data/turkiye-coverage.json" crossorigin />
     <style>
       /* Critical, inlined: the page must look deliberate before any CSS
@@ -152,10 +219,54 @@
       .rp-boot-summary nav { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
       .rp-boot-summary a, #boot a:not(.rp-boot-primary):not(.rp-boot-secondary) { color: #b3e9ff; }
       #root a:focus-visible { outline: 3px solid #00c7ff; outline-offset: 5px; }
+
+      /* The seven supported languages, visible before React and without it. */
+      #boot .rp-boot-langs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.375rem;
+        margin-top: 0.25rem;
+      }
+      #boot .rp-boot-langs a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 4px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        color: var(--rp-text-muted);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      #boot .rp-boot-langs a[aria-current='page'] {
+        background: var(--rp-text);
+        color: #0a0a0d;
+        border-color: var(--rp-text);
+      }
+
+      html[lang='ar'] {
+        --rp-font-body: 'Noto Sans Arabic', 'SF Arabic', 'Geeza Pro', 'Segoe UI', Tahoma, system-ui, sans-serif;
+        --rp-font-display: 'Noto Sans Arabic', 'SF Arabic', 'Geeza Pro', 'Segoe UI', Tahoma, system-ui, sans-serif;
+      }
+      html[lang='ar'] #boot h1,
+      html[lang='ar'] #boot p,
+      html[lang='ar'] .rp-boot-summary h2,
+      html[lang='ar'] .rp-boot-summary p {
+        letter-spacing: normal;
+        line-height: 1.55;
+      }
+      html[dir='rtl'] #boot .rp-boot-stats div {
+        border-left: 0;
+        border-right: 2px solid var(--rp-red);
+        padding-left: 0;
+        padding-right: 0.75rem;
+      }
+      html[lang='ar'] #boot h1 { line-height: 1.3; }
 </style>
     <script type="module" crossorigin src="./assets/three-mOo7m9mM.js"></script>
-    <script type="module" crossorigin src="./assets/main-aV9VQvCN.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-6b3wjFQU.css">
+    <script type="module" crossorigin src="./assets/main-m2pcQuaP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-BelF-lXc.css">
   </head>
   <body>
     <!-- Visible fallback for every visitor before React mounts, and when JavaScript is unavailable. -->
@@ -170,6 +281,15 @@
       <a class="rp-boot-primary" href="https://apps.apple.com/de/app/radarpro-radar-eds/id6776351434">App Store&#39;dan indir</a>
       <a class="rp-boot-secondary" href="https://play.google.com/store/apps/details?id=com.radartr.radarpro">Google Play&#39;den indir</a>
     </div>
+    <nav class="rp-boot-langs" aria-label="Dil">
+      <a href="./" hreflang="tr" lang="tr" data-lang="tr" aria-current="page">Türkçe</a>
+      <a href="./en.html" hreflang="en" lang="en" data-lang="en">English</a>
+      <a href="./es.html" hreflang="es" lang="es" data-lang="es">Español</a>
+      <a href="./de.html" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+      <a href="./ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <a href="./ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a>
+      <a href="./pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a>
+    </nav>
     <noscript><p class="rp-boot-note">Etkileşimli sürüş deneyimi JavaScript gerektirir. Ürün bilgileri, rehber ve indirme bağlantıları JavaScript olmadan da kullanılabilir.</p></noscript>
   </main>
   <section class="rp-boot-summary" aria-labelledby="overview">
@@ -179,9 +299,8 @@
     <p>Yasal hız limitlerine uyun. RadarPro sürüş farkındalığı sağlar; bütün radarları bildirme veya cezalardan kaçınma garantisi vermez.</p>
     <nav aria-label="RadarPro">
       <a href="./radar-rehberi.html">Radar ve EDS rehberi</a>
-      <a href="./en.html" lang="en">English</a>
-      <a href="./gizlilik.html">Gizlilik Politikası</a>
-      <a href="./kullanim-kosullari.html">Kullanım Koşulları</a>
+      <a href="./gizlilik.html" hreflang="en" lang="en">Gizlilik Politikası</a>
+      <a href="./kullanim-kosullari.html" hreflang="en" lang="en">Kullanım Koşulları</a>
     </nav>
   </section></div>
     <script>

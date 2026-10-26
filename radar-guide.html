@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Generated from src/data/search.json. Visible, linked guidance, not bot-only copy. -->
-<html lang="en"><head>
+<html lang="en" dir="ltr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050507">
 <title>Speed Cameras in Türkiye: EDS &amp; Average-Speed Checks | RadarPro</title>
@@ -35,7 +35,12 @@
       "name": "RadarPro",
       "inLanguage": [
         "tr",
-        "en"
+        "en",
+        "es",
+        "de",
+        "ru",
+        "ar",
+        "pt"
       ]
     },
     {
@@ -69,11 +74,62 @@
     }
   ]
 }</script>
+    <script>
+      (function () {
+        try {
+          var LANGS = ["tr","en","es","de","ru","ar","pt"];
+          var PATHS = {"tr":"./","en":"./en.html","es":"./es.html","de":"./de.html","ru":"./ru.html","ar":"./ar.html","pt":"./pt.html"};
+          var path = location.pathname;
+          var file = path.split('/').filter(Boolean).pop() || '';
+          var name = file.replace(/\.html$/i, '');
+          var current = LANGS.indexOf(name) >= 0 ? name : 'tr';
+          var saved = null;
+          try { saved = localStorage.getItem('radarpro.lang'); } catch (e) {}
+          if (LANGS.indexOf(saved) < 0) saved = null;
+          var params = new URLSearchParams(location.search);
+          var requested = params.get('lang');
+          if (LANGS.indexOf(requested) < 0) requested = null;
+          var crawler = /bot|crawler|spider|crawling|slurp|bingpreview|googlebot|yandex|baidu|duckduck|facebookexternalhit|whatsapp|telegram|linkedin|twitterbot|embedly|pinterest/i.test(navigator.userAgent || '');
+          var pinned = params.has('at') || params.get('shot') === '1';
+          var next = null;
+          if (saved && saved !== current) {
+            next = saved;
+          } else if (!saved && requested && requested !== current) {
+            next = requested;
+          } else if (!saved && !requested && !crawler && !pinned && current === 'tr') {
+            var tags = (navigator.languages || []).concat([navigator.language || '']);
+            var matched = null;
+            for (var i = 0; i < tags.length; i++) {
+              var base = String(tags[i]).toLowerCase().split(/[-_]/)[0];
+              if (LANGS.indexOf(base) >= 0) { matched = base; break; }
+            }
+            if (matched && matched !== current) next = matched;
+            else if (!matched) next = 'en';
+          }
+          if (next) {
+            var target = new URL(PATHS[next], location.href);
+            target.search = location.search;
+            target.searchParams.delete('lang');
+            target.hash = location.hash;
+            if (target.pathname !== path) { location.replace(target.href); return; }
+          }
+          if (params.has('lang')) {
+            params.delete('lang');
+            history.replaceState(null, '', path + (params.toString() ? '?' + params.toString() : '') + location.hash);
+          }
+          document.addEventListener('click', function (event) {
+            var link = event.target && event.target.closest ? event.target.closest('a[data-lang]') : null;
+            if (!link) return;
+            try { localStorage.setItem('radarpro.lang', link.getAttribute('data-lang')); } catch (e) {}
+          });
+        } catch (e) {}
+      })();
+    </script>
 <link rel="icon" href="./assets/brand/radarpro-icon.png">
 <link rel="stylesheet" href="./legal.css"><link rel="stylesheet" href="./guide.css">
 </head><body>
 <a class="skip" href="#content">Skip to content</a>
-<header><a class="brand" href="./en.html"><img src="./assets/brand/radarpro-icon.png" width="32" height="32" alt="">RADAR<span>PRO</span></a><nav aria-label="RadarPro"><a href="./en.html">Drive experience</a><a href="./radar-rehberi.html" lang="tr">Türkçe</a></nav></header>
+<header><a class="brand" href="./en.html"><img src="./assets/brand/radarpro-icon.png" width="32" height="32" alt="">RADAR<span>PRO</span></a><nav aria-label="Language"><a href="./" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe" aria-label="Türkçe">TR</a><a href="./en.html" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English" aria-current="page">EN</a><a href="./es.html" hreflang="es" lang="es" data-lang="es" title="Español" aria-label="Español">ES</a><a href="./de.html" hreflang="de" lang="de" data-lang="de" title="Deutsch" aria-label="Deutsch">DE</a><a href="./ru.html" hreflang="ru" lang="ru" data-lang="ru" title="Русский" aria-label="Русский">RU</a><a href="./ar.html" hreflang="ar" lang="ar" data-lang="ar" title="العربية" aria-label="العربية">AR</a><a href="./pt.html" hreflang="pt" lang="pt" data-lang="pt" title="Português" aria-label="Português">PT</a></nav></header>
 <main id="content"><p class="eyebrow">RadarPro</p><h1>Speed cameras, EDS and average-speed checks in Türkiye</h1><p class="rp-guide-intro">Before a drive, it helps to understand what a camera alert tells you and where its data ends. RadarPro is an independent driving-awareness app with spoken alerts for radar and EDS points in its database.</p><p>Within the same RadarPro app, Free includes the map, radar points, foreground alerts and manual data updates. Pro adds background alerts, automatic data updates and driving detection with the required permissions.</p>
 <nav class="contents" aria-label="Speed camera guide"><ol><li><a href="#intercity-camera-alerts">How do intercity speed camera alerts work?</a></li><li><a href="#official-radar-information">Is RadarPro an official Turkish Ministry radar map?</a></li><li><a href="#eds-average-speed">What is the difference between EDS and an average-speed section?</a></li><li><a href="#background-alerts">Can alerts work while another navigation app is open?</a></li><li><a href="#data-updates">How are new cameras and data updates handled?</a></li><li><a href="#intro-and-trial">Is the initial experience the same as a Pro subscription trial?</a></li><li><a href="#driving-safety">Does using RadarPro mean I will avoid a fine?</a></li></ol></nav>
 <section id="intercity-camera-alerts"><h2>How do intercity speed camera alerts work?</h2><p>RadarPro compares your location with radar and check points in its database, then speaks distance and, when available, speed-limit alerts as you approach. The map, foreground alerts and manual data updates remain available in Free. Alert distance and coverage depend on the point type, available data and location accuracy.</p></section>
@@ -87,5 +143,5 @@
       <a class="rp-boot-primary" href="https://apps.apple.com/de/app/radarpro-radar-eds/id6776351434">Download on the App Store</a>
       <a class="rp-boot-secondary" href="https://play.google.com/store/apps/details?id=com.radartr.radarpro">Get it on Google Play</a>
     </div></section>
-</main><footer><a href="./en.html">Drive experience</a><a href="./privacy.html">Privacy Policy</a><a href="./terms.html">Terms of Use</a><a href="mailto:support@radarpro.online">support@radarpro.online</a><p>© 2026 RadarPro</p></footer>
+</main><footer><a href="./en.html">Drive experience</a><a href="./privacy.html" hreflang="en" lang="en">Privacy Policy</a><a href="./terms.html" hreflang="en" lang="en">Terms of Use</a><a href="mailto:support@radarpro.online">support@radarpro.online</a><p>© 2026 RadarPro</p></footer>
 </body></html>
