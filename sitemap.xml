@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://radarpro.online/</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -13,6 +14,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/en.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -24,6 +26,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/es.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -35,6 +38,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/de.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -46,6 +50,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/ru.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -57,6 +62,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/ar.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -68,6 +74,7 @@
   </url>
   <url>
     <loc>https://radarpro.online/pt.html</loc>
+    <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/en.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/es.html" />
@@ -77,10 +84,16 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/pt.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/" />
   </url>
-  <url><loc>https://radarpro.online/radar-rehberi.html</loc></url>
-  <url><loc>https://radarpro.online/radar-guide.html</loc></url>
-  <url><loc>https://radarpro.online/gizlilik.html</loc></url>
-  <url><loc>https://radarpro.online/privacy.html</loc></url>
-  <url><loc>https://radarpro.online/kullanim-kosullari.html</loc></url>
-  <url><loc>https://radarpro.online/terms.html</loc></url>
+  <url><loc>https://radarpro.online/radar-rehberi.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://radarpro.online/radar-guide.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://radarpro.online/gizlilik.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://radarpro.online/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://radarpro.online/kullanim-kosullari.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://radarpro.online/terms.html</loc>
+    <lastmod>2026-10-26</lastmod></url>
 </urlset>
