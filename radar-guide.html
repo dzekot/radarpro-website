@@ -89,7 +89,7 @@
           var params = new URLSearchParams(location.search);
           var requested = params.get('lang');
           if (LANGS.indexOf(requested) < 0) requested = null;
-          var crawler = /bot|crawler|spider|crawling|slurp|bingpreview|googlebot|yandex|baidu|duckduck|facebookexternalhit|whatsapp|telegram|linkedin|twitterbot|embedly|pinterest/i.test(navigator.userAgent || '');
+          var crawler = /bot|crawler|spider|crawling|slurp|bingpreview|googlebot|google-inspectiontool|yandex|baidu|duckduck|facebookexternalhit|whatsapp|telegram|linkedin|twitterbot|embedly|pinterest/i.test(navigator.userAgent || '');
           var pinned = params.has('at') || params.get('shot') === '1';
           var next = null;
           if (saved && saved !== current) {
