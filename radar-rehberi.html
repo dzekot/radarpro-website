@@ -103,8 +103,21 @@
               var base = String(tags[i]).toLowerCase().split(/[-_]/)[0];
               if (LANGS.indexOf(base) >= 0) { matched = base; break; }
             }
-            if (matched && matched !== current) next = matched;
-            else if (!matched) next = 'en';
+            if (matched && matched !== current) {
+              try {
+                if (sessionStorage.getItem('radarpro.lang.auto') !== matched) {
+                  sessionStorage.setItem('radarpro.lang.auto', matched);
+                  next = matched;
+                }
+              } catch (e) { next = matched; }
+            } else if (!matched) {
+              try {
+                if (sessionStorage.getItem('radarpro.lang.auto') !== 'en') {
+                  sessionStorage.setItem('radarpro.lang.auto', 'en');
+                  next = 'en';
+                }
+              } catch (e) { next = 'en'; }
+            }
           }
           if (next) {
             var target = new URL(PATHS[next], location.href);
