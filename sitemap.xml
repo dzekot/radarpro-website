@@ -96,4 +96,64 @@
     <lastmod>2026-10-26</lastmod></url>
   <url><loc>https://radarpro.online/terms.html</loc>
     <lastmod>2026-10-26</lastmod></url>
+  <url>
+    <loc>https://radarpro.online/guide-es.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/radar-rehberi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/radar-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/guide-es.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://radarpro.online/guide-de.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://radarpro.online/guide-ru.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://radarpro.online/guide-ar.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/guide-pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/radar-rehberi.html" />
+  </url>
+  <url>
+    <loc>https://radarpro.online/guide-de.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/radar-rehberi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/radar-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/guide-es.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://radarpro.online/guide-de.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://radarpro.online/guide-ru.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://radarpro.online/guide-ar.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/guide-pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/radar-rehberi.html" />
+  </url>
+  <url>
+    <loc>https://radarpro.online/guide-ru.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/radar-rehberi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/radar-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/guide-es.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://radarpro.online/guide-de.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://radarpro.online/guide-ru.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://radarpro.online/guide-ar.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/guide-pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/radar-rehberi.html" />
+  </url>
+  <url>
+    <loc>https://radarpro.online/guide-ar.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/radar-rehberi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/radar-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/guide-es.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://radarpro.online/guide-de.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://radarpro.online/guide-ru.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://radarpro.online/guide-ar.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/guide-pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/radar-rehberi.html" />
+  </url>
+  <url>
+    <loc>https://radarpro.online/guide-pt.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://radarpro.online/radar-rehberi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radarpro.online/radar-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://radarpro.online/guide-es.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://radarpro.online/guide-de.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://radarpro.online/guide-ru.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://radarpro.online/guide-ar.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://radarpro.online/guide-pt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radarpro.online/radar-rehberi.html" />
+  </url>
 </urlset>
